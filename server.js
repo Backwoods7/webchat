@@ -13,7 +13,7 @@ app.use('/style.css', express.static(__dirname + '/style.css'));
 app.use('/client.js', express.static(__dirname + '/client.js'));
 
 //chat features
-var peopleOnline = -1;
+var peopleOnline = 0;
 io.on('connection', function(socket){
   socket.name = "Unknown" + Math.floor((Math.random() * 100) + 1);
   peopleOnline += 1;
